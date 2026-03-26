@@ -34,3 +34,14 @@ Thu Mar 26 07:24:59 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 35a3409
+Thu Mar 26 07:37:45 PM UTC 2026: 
+ list.c | 21 ++++++++++++++++++---
+ 1 file changed, 18 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:93:53: error: ‘next’ undeclared (first use in this function)
+   93 |     if(list->current->prev == NULL && list->current-next != NULL) {
+      |                                                     ^~~~
+list.c:93:53: note: each undeclared identifier is reported only once for each function it appears in
+1fc0cda

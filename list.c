@@ -89,13 +89,28 @@ void * popBack(List * list) {
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
 void * popCurrent(List * list) {
-    if(list->current != NULL && list->current->next != NULL && list->current->prev != NULL) {
-        list->current->prev->next = list->current->next;
-        list->current->next->prev = list->current->prev;
-        void* dato = list->current->data;
-        free(list->current);
+    void* dato = NULL;
+    if(list->current->prev == NULL && list->current-next != NULL) {
+        dato = list->current->data;
+        list->current = list->current->next;
         return dato;
     }
+    
+    if(list->current->prev != NULL && list->current-next != NULL) {
+        dato = list->current->data;
+        list->current->prev->next = list->current->next;
+        list->current->next->prev = list->current->prev;
+        list->current = list->current->next;
+        return dato;
+    }
+
+    if(list->current->prev != NULL && list->current-next == NULL) {
+        dato = list->current->data;
+        list->current->prev->next = NULL;
+        list->current = NULL;
+        return dato;
+    }
+    
     return NULL;
 }
 
