@@ -45,3 +45,14 @@ list.c:93:53: error: ‘next’ undeclared (first use in this function)
       |                                                     ^~~~
 list.c:93:53: note: each undeclared identifier is reported only once for each function it appears in
 1fc0cda
+Thu Mar 26 07:38:17 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:99:53: error: ‘next’ undeclared (first use in this function)
+   99 |     if(list->current->prev != NULL && list->current-next != NULL) {
+      |                                                     ^~~~
+list.c:99:53: note: each undeclared identifier is reported only once for each function it appears in
+099170b
