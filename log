@@ -161,3 +161,14 @@ Sat Mar 28 07:59:45 PM UTC 2026:
  tests:  6|3
 total_score: 30/60
 6ad7028
+Sat Mar 28 08:00:24 PM UTC 2026: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:47:8: error: expected ‘(’ before ‘if’
+   47 |     if if (list->head != NULL) {
+      |        ^~
+      |        (
+32f8904
