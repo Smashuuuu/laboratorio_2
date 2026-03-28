@@ -194,3 +194,14 @@ Sat Mar 28 08:03:09 PM UTC 2026:
  tests:  10|2
 total_score: 40/60
 b4570e9
+Sat Mar 28 08:06:18 PM UTC 2026: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:100:11: error: unused variable ‘newNode’ [-Werror=unused-variable]
+  100 |     Node* newNode = createNode(data);
+      |           ^~~~~~~
+cc1: all warnings being treated as errors
+79b602e
